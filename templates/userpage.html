@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h1> {{ title }} </h1>
+    <h3> {{ welcome }} </h3>
+
+    {% if user_list|length == 0 %}
+        <p> No blogs yet </p>
+    {% else %}
+    <b> Post Name</b>
+    <b> Post Body</b>
+
+    {% for blog in blogs %}
+
+        <form id= "single_blog" action= "/singleblog">
+            <input form="singleblog_blog" type="submit"
+            class= "link_button" name= "blog_name" value= "{{blog.name"/>
+        </form>
+
+        <form id= "singleblog_blog" action= "/">
+            <input form= "single_user" type= "submit" class= "link_button" name= "user"
+            value= "{{blog.owner"}}/>
+        </form>
+
+        {{blog.body}}
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}

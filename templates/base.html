@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <style type = "text/css">
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+             <tr>
+                <a href= '/home'>Home</a>
+                <a href= '/userpage'>Users</a>
+                <a href= '/newpost'>Add Post</a>
+                <a href= '/login'>Login</a>
+                <a href= '/logout'>Logout</a>
+                <a href= '/signup'> Signup</a>
+            </tr>
+        </div>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+
+</body>
+</html>

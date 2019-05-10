@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{{title}}</h1>
+
+{% if name %}
+    <form>
+        <h4> {{name}}, are you sure you want to logout? </h4>
+        <input type ="submit" name= "logout" value= "yes">
+
+    </form>
+{% else %}
+    <h4> No one is <a href= "/login">logged in</a> currently </h4>
+
+{% endif %}
+
+{% endblock %}
